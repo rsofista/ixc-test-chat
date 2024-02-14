@@ -1,0 +1,35 @@
+POST http://localhost:3001/users/create
+Content-Type: application/json
+
+
+{
+  "email": "jonata3@jonata",
+  "name": "Jonata2",
+  "pass": "123456"
+}
+
+###
+
+GET http://localhost:3001/users/contacts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvbmF0YUBqb25hdGEiLCJpYXQiOjE3MDc4NjY5MzEsImV4cCI6MTcwNzg3MDUzMX0.9g7Zniu4ZJvYYj58lyYX_X_McmJQNp8dvkBLn-nk5xo
+
+###
+
+POST http://localhost:3001/messages/create
+Content-Type: application/json
+
+{
+  "userId": "65ca54b44cd88f3533233c3c",
+  "text": "jonata pra 3 dois"
+}
+
+
+###
+
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "email": "jonata@jonata",
+  "pass": "jonata"
+}
